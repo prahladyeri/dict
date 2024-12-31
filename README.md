@@ -1,4 +1,3 @@
-```bash
 This dict program is the Windows equivalent of Linux dict command line utility.
 
 Genesis:
@@ -33,4 +32,3 @@ Any Visual Studio Edition including Professional, Community, Express, etc. relea
 **Compatibility**
 
 Runs on Windows 7 and later as long as .NET Framework 4 or above is installed. Should run on Linux too through the WINE compatibility layer.
-```
