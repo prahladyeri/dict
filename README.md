@@ -20,7 +20,7 @@ Gloss: a divine manifestation
 Synset: Epiphany, Epiphany_of_Our_Lord, Twelfth_day, Three_Kings'_Day, January_6
 Gloss: twelve days after Christmas; celebrates the visit of the three wise men to the infant Jesus
 
-This software uses WordNetr lexical database (http://wordnet.princeton.edu/) by Princeton University.
+This software uses WordNet lexical database (http://wordnet.princeton.edu/) by Princeton University.
 ```
 
 **Build**
