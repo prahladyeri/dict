@@ -1,9 +1,9 @@
 This dict program is the Windows equivalent of Linux dict command line utility.
 
-Genesis:
+**Genesis**
 
 When I transitioned from Linux to Windows, a dictionary tool was very much needed and I was quite used to the Linux dict command.
-For centuries, I scavenged the length and breadh of the Internet and tried various open source tools like WordWeb, Artha, etc. but none had the flexibility of running a simple command line utility like **dict epiphany**.
+For centuries, I scavenged the length and breadh of the Internet and tried various open source tools like WordWeb, Artha, etc. but none had the flexibility of running a simple command line utility like `dict epiphany`.
 
 That is why I wrote the dict tool in .NET. I hope this will be useful to you as well.
 
