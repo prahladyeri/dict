@@ -9,6 +9,7 @@ That is why I wrote the dict tool in .NET by utilizing the [WordNet open source 
 
 **Usage**
 
+```bash
 C:\programs>dict epiphany
 
 Dict, version 1.0
@@ -24,6 +25,7 @@ Copyright (C) 2024 Prahlad Yeri <prahladyeri@yahoo.com>
 License: MIT
 This is free software; you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
+```
 
 **Build**
 
