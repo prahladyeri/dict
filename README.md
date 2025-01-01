@@ -1,3 +1,9 @@
+![license](https://img.shields.io/github/license/prahladyeri/dict.svg)
+![last-commit](https://img.shields.io/github/last-commit/prahladyeri/dict.svg)
+[![patreon](https://img.shields.io/badge/Patreon-brown.svg?logo=patreon)](https://www.patreon.com/prahladyeri)
+[![paypal](https://img.shields.io/badge/PayPal-blue.svg?logo=paypal)](https://paypal.me/prahladyeri)
+[![follow](https://img.shields.io/twitter/follow/prahladyeri.svg?style=social)](https://x.com/prahladyeri)
+
 This dict program is the Windows equivalent of Linux `dict` command line utility.
 
 **Genesis**
@@ -20,6 +26,10 @@ Gloss: the attribute of being brief or fleeting
 
 This software uses WordNetr lexical database (http://wordnet.princeton.edu/) by Princeton University.
 ```
+
+**Install**
+
+Just get the latest release build [from here](https://github.com/prahladyeri/dict/releases/latest) and extract it to a directory of your choice such as `c:\programs\`. Make sure such directory is included in the `%PATH%` environment variable as it's easier to run it from the command prompt.
 
 **Build**
 
