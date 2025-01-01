@@ -29,7 +29,7 @@ This software uses WordNetr lexical database (http://wordnet.princeton.edu/) by 
 
 **Install**
 
-Just get the latest release build [from here](https://github.com/prahladyeri/dict/releases/latest) and extract it to a directory of your choice such as `c:\programs\`. Make sure such directory is included in the `%PATH%` environment variable as it's easier to run it from the command prompt.
+Just get the latest release build [from here](https://github.com/prahladyeri/dict/releases/latest) and extract it inside a directory of your choice such as `c:\programs\`. Make sure it is included in the `%PATH%` environment variable as it's easier to run it from the command prompt.
 
 **Build**
 
