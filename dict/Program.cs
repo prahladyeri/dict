@@ -17,11 +17,11 @@ namespace dict
     class Program
     {
         static string wnPath = AppDomain.CurrentDomain.BaseDirectory + @"wn.dict\";
-        static string indexFilePath = wnPath + "index.noun";
-        static string dataFilePath = wnPath + "data.noun";
+        //static string indexFilePath = wnPath + "index.noun";
+        //static string dataFilePath = wnPath + "data.noun";
 
-        static List<WordIndexEntry> indexEntries;
-        static Dictionary<int, Synset> synsets;
+        static List<WordIndexEntry> indexEntries = new List<WordIndexEntry>();
+        static Dictionary<int, Synset> synsets = new Dictionary<int, Synset>();
 
         private static void lookUp(string wordToLookup) {
             WordIndexEntry entry = indexEntries.Find(e => e.Word == wordToLookup);
@@ -49,10 +49,36 @@ namespace dict
         static void Main(string[] args)
         {
             string attrib = "This software uses WordNet® lexical database (http://wordnet.princeton.edu/) by Princeton University.";
-            indexEntries = WordNetIndexReader.ReadIndexFile(indexFilePath);
-            synsets = WordNetDataReader.ReadDataFile(dataFilePath);
+            //indexEntries = WordNetIndexReader.ReadIndexFile(indexFilePath);
+            //synsets = WordNetDataReader.ReadDataFile(dataFilePath);
 
-            Version v= Assembly.GetExecutingAssembly().GetName().Version;
+            string[] posSuffixes = { "noun", "verb", "adj", "adv" };
+            // Load all parts of speech
+            foreach (string pos in posSuffixes)
+            {
+                string indexFile = wnPath + "index." + pos;
+                string dataFile = wnPath + "data." + pos;
+
+                if (File.Exists(indexFile) && File.Exists(dataFile))
+                {
+                    // Assuming these return collections, append them:
+                    indexEntries.AddRange(WordNetIndexReader.ReadIndexFile(indexFile));
+
+                    // For the dictionary, merge keys safely
+                    var currentSynsets = WordNetDataReader.ReadDataFile(dataFile);
+                    foreach (var kvp in currentSynsets)
+                    {
+                        // WordNet offsets are unique within a POS file, but to be completely safe across 
+                        // different POS files, you might want a composite key or just skip duplicates.
+                        if (!synsets.ContainsKey(kvp.Key))
+                        {
+                            synsets.Add(kvp.Key, kvp.Value);
+                        }
+                    }
+                }
+            }
+
+            Version v = Assembly.GetExecutingAssembly().GetName().Version;
             string version= string.Format("{0}.{1}", v.Major, v.Minor);
             Console.WriteLine("Dict, version " + version );
             
