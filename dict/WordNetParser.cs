@@ -14,7 +14,7 @@ namespace dict
 
     class WordNetIndexReader
     {
-        public static List<WordIndexEntry> ReadIndexFile(string filePath)
+        public static List<WordIndexEntry> ReadIndexFile(string filePath, string pos)
         {
             var entries = new List<WordIndexEntry>();
             foreach (string line in File.ReadAllLines(filePath))
@@ -34,7 +34,7 @@ namespace dict
                 var entry = new WordIndexEntry
                 {
                     Word = parts[0],
-                    Pos = parts[1],
+                    Pos = pos, //parts[1],
                     SynsetCount = synsetCount,
                     PointerCount = pointerCount,
                     Pointers = ExtractArray(parts, 4, pointerCount),
