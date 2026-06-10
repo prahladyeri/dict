@@ -66,7 +66,7 @@ namespace dict
     {
         public List<string> Words { get; set; }
         public string Gloss { get; set; }
-        // Optional: To store structural relations if parsed later
+        // TODO: To store structural relations if parsed later
         // public List<SynsetPointer> Pointers { get; set; } = new List<SynsetPointer>();
     }
 }
